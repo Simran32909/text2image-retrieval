@@ -31,8 +31,8 @@ This project is a web application that enables users to retrieve images from a d
 ### Steps
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/Simran32909/text_to_image_model.git
-   cd text_to_image_model.git
+   git clone https://github.com/Simran32909/text2image-retrieval.git
+   cd text2image-retrieval.git
 
 2. **Set Up Virtual Environment**
    ```bash
