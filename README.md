@@ -53,3 +53,9 @@ This project is a web application that enables users to retrieve images from a d
 5. **Run Application**
    ```bash
    flask run
+
+## Contributing
+Contributions are welcome! Feel free to fork the repository and submit a pull request for any enhancements or bug fixes.
+
+## License
+This project is licensed under the Apache License, Version 2.0
