@@ -9,9 +9,10 @@ app = Flask(__name__)
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model, preprocess = clip.load("ViT-B/32", device)
 
-ALIGNED_EMBEDDINGS_PATH = r"C:\Users\simra\PycharmProjects\cross_domain_transfer_learning\data\aligned_embeddings.npz"
-CAPTIONS_PATH = r"C:\Users\simra\PycharmProjects\cross_domain_transfer_learning\data\captions_tokenized.csv"
-IMAGE_PATH_TEMPLATE = "/static/images/flickr30k_images/{filename}"
+ALIGNED_EMBEDDINGS_PATH = r"data/aligned_embeddings.npz"
+CAPTIONS_PATH = r"data/captions_tokenized.csv"
+IMAGE_PATH_TEMPLATE = "static/images/flickr30k_images/{filename}"
+
 git remote add origin https://github.com
 aligned_data = np.load(ALIGNED_EMBEDDINGS_PATH)
 text_emb = aligned_data["text"]
