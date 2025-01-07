@@ -42,6 +42,7 @@ This project is a web application that enables users to retrieve images from a d
 3. **Install Dependencies**
    ```bash
    pip install -r requirements.txt
+   pip install git+https://github.com/openai/CLIP.git
 
 4. **Add Dataset**
 - The dataset can be downloaded with the following Google Drive link: https://drive.google.com/file/d/1LmyHPaHKqN7oY5E7TqL0cFUBhdIdVb7e/view?usp=sharing
