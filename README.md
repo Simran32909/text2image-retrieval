@@ -56,6 +56,3 @@ This project is a web application that enables users to retrieve images from a d
 
 ## Contributing
 Contributions are welcome! Feel free to fork the repository and submit a pull request for any enhancements or bug fixes.
-
-## License
-This project is licensed under the Apache License, Version 2.0
