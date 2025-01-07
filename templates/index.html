@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Image Retrieval</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header><h1 class="heading">
+                Text-to-Image
+            </h1>
+            <p>Start typing and find relevant images!</p>
+        </header>
+        <main><input type="text" id="searchInput" placeholder="Type something creative...">
+            <div id="suggestionsBox" class="suggestions-box"></div>
+            <button id="retrieveBtn">Retrieve Images</button>
+            <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+                <div class="spinner"></div>
+            </div>
+
+            <div id="results">
+                <ul>
+                    {% for result in results %}
+                    <li>
+                        <img src="{{ result.image_url }}" alt="Image"/>
+                        <p>Similarity: {{ result.similarity }}</p>
+                        <button class="feedback-btn" data-id="{{ loop.index }}" data-feedback="relevant">Relevant</button>
+                        <button class="feedback-btn" data-id="{{ loop.index }}" data-feedback="not_relevant">Not Relevant</button>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
