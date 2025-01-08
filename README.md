@@ -46,7 +46,7 @@ This project is a web application that enables users to retrieve images from a d
 
 4. **Add Dataset**
 - The dataset can be downloaded with the following Google Drive link: https://drive.google.com/drive/folders/1boFDJtIIvfTos5yXuqeDQJ18lUgwVlRo?usp=drive_link
-- Download the dataset locally and place the `embeddings.rar` in the `data/` directory of the project:
+- Download the dataset locally and place all the files inside the `embeddings.rar` in the `data/` directory of the project:
     - `aligned_embeddings.npz`: Contains precomputed text and image embeddings.
     - `captions_tokenized.csv`: Metadata containing image captions.
 - Place the `flickr30K_images.rar` in the `static/images/` directory.
