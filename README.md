@@ -39,17 +39,17 @@ This project is a web application that enables users to retrieve images from a d
    python -m venv venv
    venv\Scripts\activate
 
-3. **Install Dependencies**
+3. **Install dependencies**
    ```bash
    pip install -r requirements.txt
    pip install git+https://github.com/openai/CLIP.git
 
 4. **Add Dataset**
-- The dataset can be downloaded with the following Google Drive link: https://drive.google.com/file/d/1LmyHPaHKqN7oY5E7TqL0cFUBhdIdVb7e/view?usp=sharing
-- Download the dataset locally and place it in the `data/` directory of the project:
+- The dataset can be downloaded with the following Google Drive link: https://drive.google.com/drive/folders/1boFDJtIIvfTos5yXuqeDQJ18lUgwVlRo?usp=drive_link
+- Download the dataset locally and place the `embeddings.rar` in the `data/` directory of the project:
     - `aligned_embeddings.npz`: Contains precomputed text and image embeddings.
     - `captions_tokenized.csv`: Metadata containing image captions.
-- Place the images in the `static/images/` directory.
+- Place the `flickr30K_images.rar` in the `static/images/` directory.
 
 5. **Run Application**
    ```bash
