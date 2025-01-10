@@ -1,14 +1,12 @@
 ﻿document.getElementById('searchInput').addEventListener('input', async function() {
     const userInput = this.value;
     const suggestionsBox = document.getElementById('suggestionsBox');
-    suggestionsBox.innerHTML = ''; // Clear previous suggestions
-
+    suggestionsBox.innerHTML = ''; 
     if (!userInput.trim()) {
-        suggestionsBox.style.display = 'none'; // Hide if input is empty
+        suggestionsBox.style.display = 'none'; 
         return;
     }
 
-    // Fetch suggestions from the backend
     const response = await fetch('/get_suggestions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -17,21 +15,20 @@
     const data = await response.json();
 
     if (data.suggestions && data.suggestions.length > 0) {
-        suggestionsBox.style.display = 'block'; // Show the suggestions box
+        suggestionsBox.style.display = 'block';
         data.suggestions.forEach((suggestion) => {
             const suggestionItem = document.createElement('div');
             suggestionItem.textContent = suggestion;
             suggestionItem.className = 'suggestion-item';
             suggestionItem.onclick = () => {
-                // Fill the input with the clicked suggestion
                 document.getElementById('searchInput').value = suggestion;
-                suggestionsBox.innerHTML = ''; // Clear suggestions after selection
-                suggestionsBox.style.display = 'none'; // Hide the suggestions box
+                suggestionsBox.innerHTML = ''; 
+                suggestionsBox.style.display = 'none';
             };
             suggestionsBox.appendChild(suggestionItem);
         });
     } else {
-        suggestionsBox.style.display = 'none'; // Hide the suggestions box if no suggestions
+        suggestionsBox.style.display = 'none'; 
     }
 });
 
@@ -40,15 +37,13 @@ document.getElementById('retrieveBtn').addEventListener('click', async () => {
     const resultsDiv = document.getElementById('results');
     const loadingSpinner = document.getElementById('loadingSpinner');
 
-    // Show the loading spinner
     loadingSpinner.style.display = 'block';
 
     resultsDiv.innerHTML = '<p>Loading...</p>';
 
-    // Check if user input is empty
     if (!userInput.trim()) {
         alert('Please enter some text!');
-        loadingSpinner.style.display = 'none'; // Hide the spinner in case of empty input
+        loadingSpinner.style.display = 'none'; 
         return;
     }
 
