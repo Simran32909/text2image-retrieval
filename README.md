@@ -1,4 +1,4 @@
-# Text-to-Image Retrieval System
+# PerceptiText
 
 This project is a web application that enables users to retrieve images from a dataset by entering textual descriptions. The system leverages OpenAI's CLIP model to map textual input to image embeddings, enabling efficient and accurate text-to-image retrieval.
 
@@ -31,8 +31,8 @@ This project is a web application that enables users to retrieve images from a d
 ### Steps
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/Simran32909/text2image-retrieval.git
-   cd text2image-retrieval.git
+   git clone https://github.com/Simran32909/PerceptiText.git
+   cd PerceptiText.git
 
 2. **Set Up Virtual Environment**
    ```bash
